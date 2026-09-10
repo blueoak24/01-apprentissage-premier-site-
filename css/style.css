@@ -58,6 +58,71 @@ footer {
   color: #8a7461;
 }
 
+/* Contenu principal */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main section {
+  margin: 2rem 0;
+}
+
+main h1 {
+  font-size: 2rem;
+  color: #a0522d;
+}
+
+main h2 {
+  font-size: 1.4rem;
+  color: #a0522d;
+  margin-bottom: 0.5rem;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+main ul {
+  list-style: square;
+  color: #d97b3f;
+  padding-left: 1.5rem;
+}
+
+main ul li {
+  margin-bottom: 0.5rem;
+  color: #3b2a1e;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #d97b3f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.cta:hover {
+  background-color: #b8622e;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.carte {
+  height: 200px;
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* Écrans plus larges (600px et plus) : header en ligne */
 @media (min-width: 600px) {
   header {
