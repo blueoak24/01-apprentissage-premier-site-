@@ -8,3 +8,16 @@ const navMenu = document.querySelector('nav ul');
 menuToggle.addEventListener('click', () => {
   navMenu.classList.toggle('nav-ouverte');
 });
+
+// Diaporama de la page d'accueil
+const diapos = document.querySelectorAll('.diapo');
+
+if (diapos.length > 0) {
+  let indexActuel = 0;
+
+  setInterval(() => {
+    diapos[indexActuel].classList.remove('active');
+    indexActuel = (indexActuel + 1) % diapos.length;
+    diapos[indexActuel].classList.add('active');
+  }, 4000);
+}
