@@ -21,3 +21,22 @@ if (diapos.length > 0) {
     diapos[indexActuel].classList.add('active');
   }, 4000);
 }
+
+// Apparition en douceur des sections au scroll
+const elementsApparition = document.querySelectorAll('.apparition');
+
+if (elementsApparition.length > 0) {
+  const observateur = new IntersectionObserver((entrees) => {
+    entrees.forEach((entree) => {
+      if (entree.isIntersecting) {
+        entree.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  elementsApparition.forEach((element) => {
+    observateur.observe(element);
+  });
+}
