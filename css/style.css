@@ -140,6 +140,25 @@ main img {
   text-align: center;
 }
 
+.grille-produits {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grille-produits section {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(59, 42, 30, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grille-produits section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(59, 42, 30, 0.15);
+}
+
 /* Écrans mobiles (moins de 600px) : afficher le bouton burger */
 @media (max-width: 599px) {
   .menu-toggle {
@@ -163,5 +182,9 @@ main img {
 
   .menu-toggle {
     display: none;
+  }
+
+  .grille-produits {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
