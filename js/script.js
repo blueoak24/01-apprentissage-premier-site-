@@ -40,3 +40,29 @@ if (elementsApparition.length > 0) {
     observateur.observe(element);
   });
 }
+
+// Galerie / Lightbox
+const photosGalerie = document.querySelectorAll('.galerie-photo');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxFermer = document.getElementById('lightbox-fermer');
+
+if (lightbox) {
+  photosGalerie.forEach((photo) => {
+    photo.addEventListener('click', () => {
+      lightboxImage.src = photo.src;
+      lightboxImage.alt = photo.alt;
+      lightbox.classList.add('ouverte');
+    });
+  });
+
+  lightboxFermer.addEventListener('click', () => {
+    lightbox.classList.remove('ouverte');
+  });
+
+  lightbox.addEventListener('click', (evenement) => {
+    if (evenement.target === lightbox) {
+      lightbox.classList.remove('ouverte');
+    }
+  });
+}
